@@ -237,6 +237,111 @@ const styling = {
 
     elevation: 24,
   },
+      m1: {
+    margin: 10,
+  },
+  m2: {
+    margin: 20,
+  },
+  m3: {
+    margin: 30,
+  },
+  m4: {
+    margin: 40,
+  },
+  m5: {
+    margin: 50,
+  },
+  my1: {
+    marginVertical: 10,
+  },
+  my2: {
+    marginVertical: 20,
+  },
+  my3: {
+    marginVertical: 30,
+  },
+  my4: {
+    marginVertical: 40,
+  },
+  my5: {
+    marginVertical: 50,
+  },
+  mx1: {
+    marginHorizontal: 10,
+  },
+  mx2: {
+    marginHorizontal: 20,
+  },
+  mx3: {
+    marginHorizontal: 30,
+  },
+  mx4: {
+    marginHorizontal: 40,
+  },
+  mx5: {
+    marginHorizontal: 50,
+  },
+  ms1: {
+    marginLeft: 10,
+  },
+  ms2: {
+    marginLeft: 20,
+  },
+  ms3: {
+    marginLeft: 30,
+  },
+  ms4: {
+    marginLeft: 40,
+  },
+  ms5: {
+    marginLeft: 50,
+  },
+  me1: {
+    marginEnd: 10,
+  },
+  me2: {
+    marginEnd: 20,
+  },
+  me3: {
+    marginEnd: 30,
+  },
+  me4: {
+    marginEnd: 40,
+  },
+  me5: {
+    marginEnd: 50,
+  },
+  mt1: {
+    marginTop: 10,
+  },
+  mt2: {
+    marginTop: 20,
+  },
+  mt3: {
+    marginTop: 30,
+  },
+  mt4: {
+    marginTop: 40,
+  },
+  mt5: {
+    marginTop: 50,
+  },
+  mb1: {
+    marginBottom: 10,
+  },
+  mb2: {
+    marginBottom: 20,
+  },
+  mb3: {
+    marginBottom: 30,
+  },
+  mb4: {
+    marginBottom: 40,
+  },
+  mb5: {
+    marginBottom: 50,
+  },
   p1: {
     padding: 10,
   },
