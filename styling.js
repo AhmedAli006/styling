@@ -1,157 +1,335 @@
-let _dark = '#1b568d';
-let _light = '#fffcf2';
+import {Appearance} from 'react-native';
+import {StyleSheet} from 'react-native';
+
+const colorScheme = Appearance.getColorScheme();
+const darkTheme = colorScheme === 'dark' ? true : false;
+
+let _dark = '#5142c6';
+let _light = '#f0effb';
+let _success = '#208b3a';
+let _warning = '#ec7d10';
+let _danger = '#fc2f00';
+let _secondary = '#353535';
+let _black = '#000000';
+let _info = '#007ea7';
+let _white = '#ffffff';
+let _transparent = 'rgba(0,0,0,.2)';
+
 const styling = {
-  headerTitle: {
-    fontSize: 25,
+  textWhite: {
+    color: _white,
+  },
+  textPrimary: {
     color: _dark,
+  },
+  textSecondary: {
+    color: _secondary,
+  },
+  textSuccess: {
+    color: _success,
+  },
+  textDanger: {
+    color: _danger,
+  },
+  textWarning: {
+    color: _warning,
+  },
+  textBlack: {
+    color: _black,
+  },
+  textInfo: {
+    color: _info,
+  },
+  textLight: {
+    color: _light,
+  },
+  textRight: {
+    textAlign: 'right',
+  },
+  textLeft: {
     textAlign: 'left',
-    borderBottomWidth: 2,
-    borderBottomColor: _dark,
   },
-  header: {
+  textCenter: {
+    textAlign: 'center',
+  },
+  textBold: {
+    fontWeight: 'bold',
+  },
+  bgWhite: {
+    backgroundColor: _white,
+  },
+  bgPrimary: {
     backgroundColor: _dark,
-    color: 'white',
-    height: 40,
-    width: '100%',
   },
-  headerContainer: {
-    width: 350,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
+  bgSecondary: {
+    backgroundColor: _secondary,
   },
-  container: {
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
+  bgSuccess: {
+    backgroundColor: _success,
   },
-  container2: {
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 2,
+  bgDanger: {
+    backgroundColor: _danger,
   },
-  container3: {
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 3,
+  bgWarning: {
+    backgroundColor: _warning,
   },
-  container4: {
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 4,
+  bgBlack: {
+    backgroundColor: _black,
   },
-  container5: {
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 5,
+  bgInfo: {
+    backgroundColor: _info,
+  },
+  bgLight: {
+    backgroundColor: _light,
+  },
+  bgTransparent: {
+    backgroundColor: _transparent,
+  },
+  borderWhite: {
+    borderColor: _white,
+  },
+  borderPrimary: {
+    borderColor: _dark,
+  },
+  borderSecondary: {
+    borderColor: _secondary,
+  },
+  borderSuccess: {
+    borderColor: _success,
+  },
+  borderDanger: {
+    borderColor: _danger,
+  },
+  borderWarning: {
+    borderColor: _warning,
+  },
+  borderBlack: {
+    borderColor: _black,
+  },
+  borderInfo: {
+    borderColor: _info,
+  },
+  borderLight: {
+    borderColor: _light,
+  },
+  borderTopWhite: {
+    borderColor: _white,
+  },
+  borderTopPrimary: {
+    borderColor: _dark,
+  },
+  borderTopSecondary: {
+    borderColor: _secondary,
+  },
+  borderTopSuccess: {
+    borderColor: _success,
+  },
+  borderTopDanger: {
+    borderColor: _danger,
+  },
+  borderTopWarning: {
+    borderColor: _warning,
+  },
+  borderTopBlack: {
+    borderColor: _black,
+  },
+  borderTopInfo: {
+    borderColor: _info,
+  },
+  borderTopLight: {
+    borderColor: _light,
+  },
+  borderBottomWhite: {
+    borderColor: _white,
+  },
+  borderBottomPrimary: {
+    borderColor: _dark,
+  },
+  borderBottomSecondary: {
+    borderColor: _secondary,
+  },
+  borderBottomSuccess: {
+    borderColor: _success,
+  },
+  borderBottomDanger: {
+    borderColor: _danger,
+  },
+  borderBottomWarning: {
+    borderColor: _warning,
+  },
+  borderBottomBlack: {
+    borderColor: _black,
+  },
+  borderBottomInfo: {
+    borderColor: _info,
+  },
+  borderBottomLight: {
+    borderColor: _light,
+  },
+  borderLeftWhite: {
+    borderColor: _white,
+  },
+  borderLeftPrimary: {
+    borderColor: _dark,
+  },
+  borderLeftSecondary: {
+    borderColor: _secondary,
+  },
+  borderLeftSuccess: {
+    borderColor: _success,
+  },
+  borderLeftDanger: {
+    borderColor: _danger,
+  },
+  borderLeftWarning: {
+    borderColor: _warning,
+  },
+  borderLeftBlack: {
+    borderColor: _black,
+  },
+  borderLeftInfo: {
+    borderColor: _info,
+  },
+  borderLeftLight: {
+    borderColor: _light,
+  },
+  borderRightWhite: {
+    borderColor: _white,
+  },
+  borderRightPrimary: {
+    borderColor: _dark,
+  },
+  borderRightSecondary: {
+    borderColor: _secondary,
+  },
+  borderRightSuccess: {
+    borderColor: _success,
+  },
+  borderRightDanger: {
+    borderColor: _danger,
+  },
+  borderRightWarning: {
+    borderColor: _warning,
+  },
+  borderRightBlack: {
+    borderColor: _black,
+  },
+  borderRightInfo: {
+    borderColor: _info,
+  },
+  borderRightLight: {
+    borderColor: _light,
+  },
+  border1: {
+    borderWidth: 1,
+  },
+  border2: {
+    borderWidth: 2,
+  },
+  border3: {
+    borderWidth: 3,
+  },
+  border4: {
+    borderWidth: 4,
+  },
+  border5: {
+    borderWidth: 5,
+  },
+  borderTop1: {
+    borderTopWidth: 1,
+  },
+  borderTop2: {
+    borderTopWidth: 2,
+  },
+  borderTop3: {
+    borderTopWidth: 3,
+  },
+  borderTop4: {
+    borderTopWidth: 4,
+  },
+  borderTop5: {
+    borderTopWidth: 5,
+  },
+  borderBottom1: {
+    borderBottomWidth: 1,
+  },
+  borderBottom2: {
+    borderBottomWidth: 2,
+  },
+  borderBottom3: {
+    borderBottomWidth: 3,
+  },
+  borderBottom4: {
+    borderBottomWidth: 4,
+  },
+  borderBottom5: {
+    borderBottomWidth: 5,
+  },
+  borderLeft1: {
+    borderLeftWidth: 1,
+  },
+  borderLeft2: {
+    borderLeftWidth: 2,
+  },
+  borderLeft3: {
+    borderLeftWidth: 3,
+  },
+  borderLeft4: {
+    borderLeftWidth: 4,
+  },
+  borderLeft5: {
+    borderLeftWidth: 5,
+  },
+  borderRight1: {
+    borderRightWidth: 1,
+  },
+  borderRight2: {
+    borderRightWidth: 2,
+  },
+  borderRight3: {
+    borderRightWidth: 3,
+  },
+  borderRight4: {
+    borderRightWidth: 4,
+  },
+  borderRight5: {
+    borderRightWidth: 5,
   },
   w100: {
     width: '100%',
   },
-  _h1: {
-    fontSize: 32,
+  w75: {
+    width: '75%',
   },
-  _h2: {
-    fontSize: 26,
+  w50: {
+    width: '50%',
   },
-  dark: {
-    color: _dark,
+  w25: {
+    width: '25%',
   },
-  bgdark: {
-    backgroundColor: _dark,
+  h100: {
+    height: '100%',
   },
-  bglight: {
-    backgroundColor: _light,
+  h80: {
+    height: '80%',
   },
-  bgWhite: {
-    backgroundColor: 'white',
+  h75: {
+    height: '75%',
   },
-  light: {
-    color: 'white',
+  h60: {
+    height: '60%',
   },
-  main: {
-    flex: 1,
+  h50: {
+    height: '50%',
   },
-  heading: {
-    fontSize: 30,
-    backgroundColor: 'rgba(0,0,0,.2)',
-    color: 'white',
-    padding: 15,
-    margin: 10,
+  h40: {
+    height: '40%',
   },
-  input: {
-    height: 50,
-    width: 300,
-    padding: 15,
-    fontSize: 16,
-    borderRadius: 15,
-    backgroundColor: 'rgb(255,255,255)',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
+  h25: {
+    height: '25%',
   },
-  inputBox: {
-    paddingVertical: 10,
-  },
-  logo: {
-    width: 190,
-    height: 85,
-  },
-  headerLogo: {
-    width: 150,
-    height: 65,
-  },
-  logoBox: {
-    paddingVertical: 40,
-  },
-  btn: {
-    backgroundColor: _dark,
-    color: 'white',
-    height: 50,
-    width: 300,
-    padding: 15,
-    fontSize: 16,
-    borderRadius: 25,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
-  },
-  txtWhite: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 16,
-  },
-  text_white: {
-    color: 'white',
-  },
-  txtprime: {
-    color: _dark,
-    fontSize: 18,
-    textAlign: 'center',
-  },
-  signUpTxt: {
-    fontSize: 25,
-    color: _dark,
-  },
-  signUpBtn: {
-    width: '100%',
+  h20: {
+    height: '20%',
   },
   fs: {
     fontSize: 16,
@@ -171,6 +349,110 @@ const styling = {
   fs5: {
     fontSize: 18,
   },
+  main: {
+    flex: 1,
+  },
+  input: {
+    height: 'auto',
+    width: '100%',
+    padding: 15,
+    fontSize: 17,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    color: _black,
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+  },
+  searchInput: {
+    height: 'auto',
+    width: '100%',
+    padding: 12,
+    fontSize: 15,
+    borderRadius: 25,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    color: _black,
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+  },
+  formInput: {
+    height: 'auto',
+    width: '100%',
+    paddingVertical: 12,
+    fontSize: 18,
+    borderBottomWidth: 2,
+    borderBottomColor: _dark,
+  },
+  btn: {
+    backgroundColor: _dark,
+    color: 'white',
+    width: '100%',
+    padding: 15,
+    fontSize: 16,
+    borderRadius: 100,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+  },
+  roundedBtn: {
+    backgroundColor: _dark,
+    color: 'white',
+    height: 50,
+    width: 50,
+    padding: 12,
+    fontSize: 16,
+    borderRadius: 25,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+  },
+  badge: {
+    width: 25,
+    height: 25,
+    fontSize: 13,
+    backgroundColor: 'white',
+    color: _dark,
+    borderRadius: 15,
+    padding: 3,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    position: 'absolute',
+    left: -10,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+  },
+
   shadow1: {
     shadowColor: 'rgba(0,0,0,.5)',
     shadowOffset: {
@@ -237,7 +519,112 @@ const styling = {
 
     elevation: 24,
   },
-      m1: {
+  p1: {
+    padding: 10,
+  },
+  p2: {
+    padding: 20,
+  },
+  p3: {
+    padding: 30,
+  },
+  p4: {
+    padding: 40,
+  },
+  p5: {
+    padding: 50,
+  },
+  py1: {
+    paddingVertical: 10,
+  },
+  py2: {
+    paddingVertical: 20,
+  },
+  py3: {
+    paddingVertical: 30,
+  },
+  py4: {
+    paddingVertical: 40,
+  },
+  py5: {
+    paddingVertical: 50,
+  },
+  px1: {
+    paddingHorizontal: 10,
+  },
+  px2: {
+    paddingHorizontal: 20,
+  },
+  px3: {
+    paddingHorizontal: 30,
+  },
+  px4: {
+    paddingHorizontal: 40,
+  },
+  px5: {
+    paddingHorizontal: 50,
+  },
+  ps1: {
+    paddingLeft: 10,
+  },
+  ps2: {
+    paddingLeft: 20,
+  },
+  ps3: {
+    paddingLeft: 30,
+  },
+  ps4: {
+    paddingLeft: 40,
+  },
+  ps5: {
+    paddingLeft: 50,
+  },
+  pt1: {
+    paddingTop: 10,
+  },
+  pt2: {
+    paddingTop: 20,
+  },
+  pt3: {
+    paddingTop: 30,
+  },
+  pt4: {
+    paddingTop: 40,
+  },
+  pt5: {
+    paddingTop: 50,
+  },
+  pe1: {
+    paddingEnd: 10,
+  },
+  pe2: {
+    paddingEnd: 20,
+  },
+  pe3: {
+    paddingEnd: 30,
+  },
+  pe4: {
+    paddingEnd: 40,
+  },
+  pe5: {
+    paddingEnd: 50,
+  },
+  pb1: {
+    paddingBottom: 10,
+  },
+  pb2: {
+    paddingBottom: 20,
+  },
+  pb3: {
+    paddingBottom: 30,
+  },
+  pb4: {
+    paddingBottom: 40,
+  },
+  pb5: {
+    paddingBottom: 50,
+  },
+  m1: {
     margin: 10,
   },
   m2: {
@@ -342,123 +729,11 @@ const styling = {
   mb5: {
     marginBottom: 50,
   },
-  p1: {
-    padding: 10,
-  },
-  p2: {
-    padding: 20,
-  },
-  p3: {
-    padding: 30,
-  },
-  p4: {
-    padding: 40,
-  },
-  p5: {
-    padding: 50,
-  },
-  py1: {
-    paddingVertical: 10,
-  },
-  py2: {
-    paddingVertical: 20,
-  },
-  py3: {
-    paddingVertical: 30,
-  },
-  py4: {
-    paddingVertical: 40,
-  },
-  py5: {
-    paddingVertical: 50,
-  },
-  px1: {
-    paddingHorizontal: 10,
-  },
-  px2: {
-    paddingHorizontal: 20,
-  },
-  px3: {
-    paddingHorizontal: 30,
-  },
-  px4: {
-    paddingHorizontal: 40,
-  },
-  px5: {
-    paddingHorizontal: 50,
-  },
-  ps1: {
-    paddingLeft: 10,
-  },
-  ps2: {
-    paddingLeft: 20,
-  },
-  ps3: {
-    paddingLeft: 30,
-  },
-  ps4: {
-    paddingLeft: 40,
-  },
-  ps5: {
-    paddingLeft: 50,
-  },
-  pe1: {
-    paddingEnd: 10,
-  },
-  pe2: {
-    paddingEnd: 20,
-  },
-  pe3: {
-    paddingEnd: 30,
-  },
-  pe4: {
-    paddingEnd: 40,
-  },
-  pe5: {
-    paddingEnd: 50,
-  },
-  pt1: {
-    paddingTop: 10,
-  },
-  pt2: {
-    paddingTop: 20,
-  },
-  pt3: {
-    paddingTop: 30,
-  },
-  pt4: {
-    paddingTop: 40,
-  },
-  pt5: {
-    paddingTop: 50,
-  },
-  pb1: {
-    paddingBottom: 10,
-  },
-  pb2: {
-    paddingBottom: 20,
-  },
-  pb3: {
-    paddingBottom: 30,
-  },
-  pb4: {
-    paddingBottom: 40,
-  },
-  pb5: {
-    paddingBottom: 50,
-  },
-  largeText: {
-    fontSize: 40,
-    marginBottom: 20,
-    color: _dark,
-    borderBottomColor: _dark,
-    borderBottomWidth: 2,
-  },
-  dflex: {
-    flex: 1,
-  },
   flexRow: {
     flexDirection: 'row',
+  },
+  flexColumn: {
+    flexDirection: 'column',
   },
   flexCenter: {
     justifyContent: 'center',
@@ -467,8 +742,8 @@ const styling = {
   flexWrap: {
     flexWrap: 'wrap',
   },
-  textRight: {
-    textAlign: 'right',
+  flexNoWrap: {
+    flexWrap: 'nowrap',
   },
   justifyContentCenter: {
     justifyContent: 'center',
@@ -488,37 +763,45 @@ const styling = {
   alignItemsEnd: {
     alignItems: 'flex-end',
   },
-  _flexDirectionColumn: {
-    flexDirection: 'column',
-  },
   justifyContentBetween: {
     justifyContent: 'space-between',
   },
   justifyContentAround: {
     justifyContent: 'space-around',
   },
-  textLeft: {
-    textAlign: 'left',
+  rounded: {
+    borderRadius: 10,
   },
-  textCenter: {
-    textAlign: 'center',
+  roundedPill: {
+    borderRadius: 500,
   },
-  whiteTransparent: {
-    backgroundColor: 'rgba(255,255,255,.6)',
-  },
-  blackTransparent: {
-    backgroundColor: 'rgba(0,0,0,.3)',
-  },
-  h100: {
-    height: '100%',
-  },
-  productCard: {
-    backgroundColor: _light,
+  label: {
+    fontSize: 18,
     borderRadius: 5,
-    marginBottom: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: _dark,
+    paddingLeft: 10,
+    color: _dark,
   },
-  darkColor: _dark,
+  chips: {
+    padding: 7,
+    paddingHorizontal: 15,
+    backgroundColor: _light,
+    borderRadius: 30,
+    margin: 2,
+    borderWidth: 1,
+    borderColor: _dark,
+  },
+  _dark: _dark,
+  _light: _light,
+  _success: _success,
+  _warning: _warning,
+  _danger: _danger,
+  _secondary: _secondary,
+  _black: _black,
+  _info: _info,
+  _white: _white,
+  _transparent: _transparent,
 };
-export default styling;
+
+const styles = StyleSheet.create(styling);
+
+export default styles;
